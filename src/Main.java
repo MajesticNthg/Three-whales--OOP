@@ -21,7 +21,7 @@ class Hero {
 
 class StrengthHero extends Hero {
     protected String name;
-    private String attribute = "Strength";
+    protected String attribute = "Strength";
 
     StrengthHero(int s, int a, int i, int h, int ms, int arm, int dmg, String n) {
         super(s, a, i, h, ms, arm, dmg);
@@ -32,8 +32,6 @@ class StrengthHero extends Hero {
         this.agility += 3;
         this.intelligence += 2;
     }
-
-    String getAttribute() {return attribute;}
 
     void RuneHaste() {
         this.moveSpeed = 550;
@@ -167,8 +165,6 @@ public class Main {
 
         Tier1NeutralCreep Harpy = new Tier1NeutralCreep(200, 30, 1, 300, 30, "Harpy", 23);
         Harpy.SleepID(-5);
-
-        System.out.println(Axe.getAttribute());
 
     }
 }
